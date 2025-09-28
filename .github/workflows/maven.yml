@@ -42,7 +42,7 @@ jobs:
         with:
           registry: ghcr.io
           username: drac22
-          password: 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
+          password: ${{ secrets.GHCR_PAT }}
       # 3) Build & Push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
