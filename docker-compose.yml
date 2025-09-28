@@ -1,8 +1,8 @@
 version: "3.9"
 services:
   spring-api-image:
-    image: ghcr.io/drac22/PruebaTotal:latest
-    container_name: PuebaTotal
+    image: ghcr.io/drac22/pruebatotal:latest
+    container_name: pruebatotal
     ports:
       - "8080:8080"
     networks:
