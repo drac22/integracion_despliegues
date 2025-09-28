@@ -41,11 +41,11 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: drac22
           password: ${{ secrets.GITHUB_TOKEN }}
       # 3) Build & Push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/pruebatotal:latest
+          tags: ghcr.io/drac22/pruebatotal:latest
