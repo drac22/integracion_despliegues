@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  spring-api-image:
+    image: ghcr.io/drac22/.../...:latest
+    container_name: ...
+    ports:
+      - "8080:8080"
+    networks:
+      - spring-network
+    depends_on:
+      - mysql
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  mysql:
+    image: mysql
+    container_name: mysql_database
+    environment:
+      MYSQL_ROOT_PASSWORD: supersegura123
+      MYSQL_DATABASE: soporte_web
+      MYSQL_USER: david
+      MYSQL_PASSWORD: 1234
+    ports:
+    - "3307:3306"
+    networks:
+      - spring-network
+    volumes:
+      - mysql-volume:/var/lib/mysql
+networks:
+  spring-network:
+volumes:
+  mysql-volume:
