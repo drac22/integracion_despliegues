@@ -48,4 +48,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/drac22/pruebatotal:latest
+          tags: ghcr.io/drac22/integracion_despliegues:latest
