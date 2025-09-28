@@ -5,7 +5,7 @@ WORKDIR /root
 COPY ./pom.xml /root
 COPY ./.mvn /root/.mvn
 COPY mvnw /root/mvnw
-
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
 COPY src /root/src

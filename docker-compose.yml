@@ -17,7 +17,7 @@ services:
     container_name: mysql_database
     environment:
       MYSQL_ROOT_PASSWORD: supersegura123
-      MYSQL_DATABASE: soporte_web
+      MYSQL_DATABASE: bbdd_spring_boot_rest_proyecto05
       MYSQL_USER: david
       MYSQL_PASSWORD: 1234
     ports:
